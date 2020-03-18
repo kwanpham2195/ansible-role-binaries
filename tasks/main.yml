@@ -1,0 +1,210 @@
+---
+# tasks file for ansible-role-binaries
+- name: Ensure tmp directory is present
+  file:
+    path: "{{ temp_dir }}"
+    state: directory
+
+- name: Ensure local_bin_dir is present
+  file:
+    path: "{{ local_bin_dir }}"
+    state: directory
+
+- name: Terraform download package
+  get_url:
+    url: "{{ terraform_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Terraform extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Terraform move executable
+  command: mv terraform "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Docker download package
+  get_url:
+    url: "{{ docker_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Docker extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Docker move executable
+  command: mv "{{ extract.files[0] }}/docker" "{{ local_bin_dir }}docker"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Awless download package
+  get_url:
+    url: "{{ awless_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Awless extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Awless move executable
+  command: mv awless "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Helm download package
+  get_url:
+    url: "{{ helm_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Helm extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Helm move executable
+  command: mv "{{ extract.files[0] }}/helm" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: GithubCli download package
+  get_url:
+    url: "{{ githubcli_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: GithubCli extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+
+- name: GithubCli move executable
+  command: mv "gh_{{ githubcli_version }}_linux_amd64/bin/gh" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Stern download package
+  get_url:
+    url: "{{ stern_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Stern move executable
+  command: mv "{{ download.dest }}" "{{ local_bin_dir }}stern"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Popeye download package
+  get_url:
+    url: "{{ popeye_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Popeye extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+
+- name: Popeye move executable
+  command: mv popeye "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Bat download package
+  get_url:
+    url: "{{ bat_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Bat extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Bat move executable
+  command: mv "bat-v{{ bat_version }}-x86_64-unknown-linux-gnu/bat" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Exa download package
+  get_url:
+    url: "{{ exa_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Exa extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Exa move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}exa"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: RCM download package
+  get_url:
+    url: "{{ rcm_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: RCM extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract }}"
+
+- name: RCM install
+  become: yes
+  shell: cd "{{ extract.files[0] }}" && ./configure && make && make install
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Ensure right permissions
+  file:
+    path: "{{ local_bin_dir }}"
+    state: directory
+    recurse: true
+    mode: "+x"
+
+- name: Ensure right owner
+  file:
+    path: "{{ local_bin_dir }}"
+    state: directory
+    recurse: true
+    owner: "{{ user_name }}"
+    group: "{{ user_group }}"
+  when: user_name is defined and user_group is defined
