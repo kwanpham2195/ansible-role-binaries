@@ -131,6 +131,25 @@
   args:
     chdir: "{{ temp_dir }}"
 
+- name: Doctl download package
+  get_url:
+    url: "{{ doctl_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Doctl extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Doctl move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}doctl"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Bat download package
   get_url:
     url: "{{ bat_url }}"
@@ -182,10 +201,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract }}"
 
 - name: RCM install
   become: yes
