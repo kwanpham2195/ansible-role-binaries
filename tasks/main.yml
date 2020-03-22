@@ -48,6 +48,23 @@
   args:
     chdir: "{{ temp_dir }}"
 
+- name: Docker-compose download package
+  get_url:
+    url: "{{ docker_compose_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Docker-compose move executable
+  command: mv "{{ download.dest }}" "{{ local_bin_dir }}docker-compose"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Awless download package
+  get_url:
+    url: "{{ awless_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
 - name: Awless download package
   get_url:
     url: "{{ awless_url }}"

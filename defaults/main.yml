@@ -5,6 +5,7 @@ local_bin_dir: ~/.local/bin/
 terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
 awless_url: "https://github.com/wallix/awless/releases/download/v{{ awless_version }}/awless-linux-amd64.tar.gz"
 docker_url: "https://download.docker.com/linux/static/stable/x86_64/docker-{{ docker_version }}.tgz"
+docker_compose_url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64"
 helm_url: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"
 githubcli_url: "https://github.com/cli/cli/releases/download/v{{ githubcli_version }}/gh_{{ githubcli_version }}_linux_amd64.tar.gz"
 stern_url: "https://github.com/wercker/stern/releases/download/{{ stern_version }}/stern_linux_amd64"
