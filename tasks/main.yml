@@ -59,10 +59,10 @@
   args:
     chdir: "{{ temp_dir }}"
 
-- name: Awless download package
+- name: Download aws-iam-authenticator
   get_url:
-    url: "{{ awless_url }}"
-    dest: "{{ temp_dir }}"
+    url: "{{ aws_iam_auth_url }}"
+    dest: "{{ local_bin_dir }}/aws-iam-authenticator"
   register: download
 
 - name: Awless download package
