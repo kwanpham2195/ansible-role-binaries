@@ -1,5 +1,16 @@
 ---
 # defaults file for ansible-role-binaries
+packages:
+  pip:
+    - flake8
+    - testinfra
+    - molecule
+    - "molecule[docker]"
+    - yq
+    - ansible==2.9.5
+    - awscli==1.18.2
+    - thefuck
+    - neovim-remote
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
 terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
