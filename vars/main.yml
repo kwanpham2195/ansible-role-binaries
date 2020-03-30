@@ -11,3 +11,5 @@ exa_version : 0.9.0
 docker_version: 19.03.8
 docker_compose_version: 1.25.4
 doctl_version: 1.39.0
+ansible_version: 2.9.5
+awscli_version: 1.18.2
