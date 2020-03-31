@@ -1,6 +1,21 @@
 ---
 - name: Converge
   hosts: all
+  pre_tasks:
+    - set_fact:
+        terraform_version: 0.12.24
+        awless_version: 0.1.11
+        helm_version: 3.1.1
+        githubcli_version: 0.6.2
+        stern_version: 1.11.0
+        popeye_version: 0.7.1
+        bat_version: 0.12.1
+        exa_version : 0.9.0
+        docker_version: 19.03.8
+        docker_compose_version: 1.25.4
+        doctl_version: 1.39.0
+        ansible_ver: 2.9.6
+        awscli_version: 1.18.2
   tasks:
     - name: "Include ansible-role-binaries"
       include_role:

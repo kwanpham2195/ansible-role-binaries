@@ -1,11 +1,5 @@
 ---
 # tasks file for ansible-role-binaries
-- name: Install pip packages
-  pip:
-    name: "{{ packages.pip }}"
-    extra_args: --user
-    state: present
-
 - name: Ensure dependencies are installed
   become: true
   pacman:
@@ -15,6 +9,8 @@
   loop:
     - unzip
     - tar
+    - python-pip
+    - gcc
 
 - name: Ensure tmp directory is present
   file:
@@ -25,6 +21,12 @@
   file:
     path: "{{ local_bin_dir }}"
     state: directory
+
+- name: Install pip packages
+  pip:
+    name: "{{ packages.pip }}"
+    extra_args: --user
+    state: present
 
 - name: Terraform download package
   get_url:
