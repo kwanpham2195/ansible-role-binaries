@@ -106,7 +106,11 @@
   get_url:
     url: "{{ kind_url }}"
     dest: "{{ local_bin_dir }}/kind"
-  register: download
+
+- name: Kubectl download package
+  get_url:
+    url: "{{ kubectl_url }}"
+    dest: "{{ local_bin_dir }}/kubectl"
 
 - name: Helm download package
   get_url:
@@ -124,6 +128,25 @@
 
 - name: Helm move executable
   command: mv "{{ extract.files[0] }}/helm" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: K9s download package
+  get_url:
+    url: "{{ k9s_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: k9s extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: k9s move executable
+  command: mv "{{ extract.files[0] }}/k9s" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
