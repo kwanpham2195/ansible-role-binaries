@@ -146,7 +146,7 @@
   register: extract
 
 - name: k9s move executable
-  command: mv "{{ extract.files[0] }}/k9s" "{{ local_bin_dir }}"
+  command: mv k9s "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
