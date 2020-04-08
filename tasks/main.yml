@@ -107,6 +107,11 @@
     url: "{{ kind_url }}"
     dest: "{{ local_bin_dir }}/kind"
 
+- name: Kops download package
+  get_url:
+    url: "{{ kops_url }}"
+    dest: "{{ local_bin_dir }}/kops"
+
 - name: Kubectl download package
   get_url:
     url: "{{ kubectl_url }}"

@@ -28,3 +28,4 @@ doctl_url: "https://github.com/digitalocean/doctl/releases/download/v{{ doctl_ve
 kind_url: "https://github.com/kubernetes-sigs/kind/releases/download/v{{ kind_version }}/kind-linux-amd64"
 kubectl_url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
 k9s_url: "https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k9s_Linux_x86_64.tar.gz"
+kops_url: "https://github.com/kubernetes/kops/releases/download/v{{ kops_version }}/kops-linux-amd64"
