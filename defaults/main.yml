@@ -25,3 +25,4 @@ popeye_url: "https://github.com/derailed/popeye/releases/download/v{{ popeye_ver
 bat_url: "https://github.com/sharkdp/bat/releases/download/v{{ bat_version }}/bat-v{{ bat_version }}-x86_64-unknown-linux-gnu.tar.gz"
 exa_url: "https://github.com/ogham/exa/releases/download/v{{ exa_version }}/exa-linux-x86_64-{{ exa_version }}.zip"
 doctl_url: "https://github.com/digitalocean/doctl/releases/download/v{{ doctl_version }}/doctl-{{ doctl_version }}-linux-amd64.tar.gz"
+kind_url: "https://github.com/kubernetes-sigs/kind/releases/download/v{{ kind_version }}/kind-linux-amd64"

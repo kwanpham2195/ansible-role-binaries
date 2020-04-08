@@ -102,6 +102,12 @@
   args:
     chdir: "{{ temp_dir }}"
 
+- name: Kind download package
+  get_url:
+    url: "{{ kind_url }}"
+    dest: "{{ local_bin_dir }}/kind"
+  register: download
+
 - name: Helm download package
   get_url:
     url: "{{ helm_url }}"
