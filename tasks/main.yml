@@ -117,6 +117,25 @@
     url: "{{ kubectl_url }}"
     dest: "{{ local_bin_dir }}/kubectl"
 
+- name: Istioctl download package
+  get_url:
+    url: "{{ istioctl_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Istioctl extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Istioctl move executable
+  command: mv "{{ extract.files[0] }}/istioctl" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Helm download package
   get_url:
     url: "{{ helm_url }}"
