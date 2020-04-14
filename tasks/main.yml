@@ -132,7 +132,7 @@
   register: extract
 
 - name: Istioctl move executable
-  command: mv "{{ extract.files[0] }}/istioctl" "{{ local_bin_dir }}"
+  command: mv istioctl "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
