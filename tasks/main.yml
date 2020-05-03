@@ -11,6 +11,7 @@
     - tar
     - python-pip
     - gcc
+  when: ansible_os_family == "Archlinux"
 
 - name: Ensure tmp directory is present
   file:
