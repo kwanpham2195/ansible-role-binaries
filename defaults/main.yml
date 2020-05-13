@@ -11,6 +11,7 @@ packages:
     - awscli=={{ awscli_version }}
     - thefuck
     - neovim-remote
+    - httpie
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
 terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
@@ -31,3 +32,4 @@ k9s_url: "https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k
 kops_url: "https://github.com/kubernetes/kops/releases/download/v{{ kops_version }}/kops-linux-amd64"
 istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istioctl-{{ istioctl_version }}-linux.tar.gz"
 mdbook_url: "https://github.com/rust-lang/mdBook/releases/download/v{{ mdbook_version }}/mdbook-v{{ mdbook_version }}-x86_64-unknown-linux-gnu.tar.gz"
+broot_url: "https://dystroy.org/broot/download/x86_64-linux/broot"

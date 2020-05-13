@@ -8,7 +8,7 @@ Installs via binary download:
 - terraform
 - awless
 - aws
-- docker
+- broot
 - docker
 - helm
 - githubcli
@@ -35,6 +35,7 @@ Installs via pip:
 - awscli
 - thefuck
 - neovim-remote
+- httpie
 
 
 Requirements

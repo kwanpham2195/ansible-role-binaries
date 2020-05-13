@@ -277,6 +277,11 @@
   args:
     chdir: "{{ temp_dir }}"
 
+- name: Broot download package
+  get_url:
+    url: "{{ broot_url }}"
+    dest: "{{ local_bin_dir }}/broot"
+
 - name: Mdbook download package
   get_url:
     url: "{{ mdbook_url }}"
