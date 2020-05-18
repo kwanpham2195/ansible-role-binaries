@@ -282,6 +282,12 @@
     url: "{{ broot_url }}"
     dest: "{{ local_bin_dir }}/broot"
 
+- name: Fluxctl download package
+  get_url:
+    url: "{{ fluxctl_version }}"
+    dest: "{{ local_bin_dir }}/fluxctl"
+  register: download
+
 - name: Mdbook download package
   get_url:
     url: "{{ mdbook_url }}"
