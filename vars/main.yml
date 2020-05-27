@@ -20,3 +20,4 @@ kops_version: 1.16.0
 istioctl_version: 1.5.1
 mdbook_version: 0.3.7
 fluxctl_version: 1.19.0
+kustomize_version: 3.5.5

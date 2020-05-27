@@ -34,3 +34,4 @@ istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_vers
 mdbook_url: "https://github.com/rust-lang/mdBook/releases/download/v{{ mdbook_version }}/mdbook-v{{ mdbook_version }}-x86_64-unknown-linux-gnu.tar.gz"
 broot_url: "https://dystroy.org/broot/download/x86_64-linux/broot"
 fluxctl_url: "https://github.com/fluxcd/flux/releases/download/{{ fluxctl_version }}/fluxctl_linux_amd64"
+kustomize_url: "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv{{ kustomize_version }}/kustomize_v{{ kustomize_version }}_linux_amd64.tar.gz"
