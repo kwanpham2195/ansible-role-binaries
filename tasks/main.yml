@@ -326,6 +326,12 @@
     dest: "{{ local_bin_dir }}/fluxctl"
   register: download
 
+- name: Kubeseal download package
+  get_url:
+    url: "{{ kubeseal_url }}"
+    dest: "{{ local_bin_dir }}/kubeseal"
+  register: download
+
 - name: Mdbook download package
   get_url:
     url: "{{ mdbook_url }}"
