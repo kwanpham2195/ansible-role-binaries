@@ -118,6 +118,11 @@
     url: "{{ kubectl_url }}"
     dest: "{{ local_bin_dir }}/kubectl"
 
+- name: Argocd CLI download package
+  get_url:
+    url: "{{ argocdcli_url }}"
+    dest: "{{ local_bin_dir }}/argocd"
+
 - name: Istioctl download package
   get_url:
     url: "{{ istioctl_url }}"
