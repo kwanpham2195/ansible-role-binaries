@@ -38,3 +38,4 @@ kustomize_url: "https://github.com/kubernetes-sigs/kustomize/releases/download/k
 lazygit_url: "https://github.com/jesseduffield/lazygit/releases/download/v{{ lazygit_version }}/lazygit_{{ lazygit_version }}_Linux_x86_64.tar.gz"
 kubeseal_url: "https://github.com/bitnami-labs/sealed-secrets/releases/download/v{{ kubeseal_version }}/kubeseal-linux-amd64"
 argocdcli_url: "https://github.com/argoproj/argo-cd/releases/download/v{{ argocdcli_version }}/argocd-linux-amd64"
+gh_md_toc_url: "https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc"
