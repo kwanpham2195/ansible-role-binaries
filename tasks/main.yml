@@ -359,6 +359,18 @@
   args:
     chdir: "{{ temp_dir }}"
 
+- name: xsv download package
+  get_url:
+    url: "{{ xsv_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: xsv extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ local_bin_dir }}"
+
 - name: Ensure right permissions
   file:
     path: "{{ local_bin_dir }}"
