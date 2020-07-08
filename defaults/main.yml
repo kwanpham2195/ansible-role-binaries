@@ -42,4 +42,4 @@ gh_md_toc_url: "https://raw.githubusercontent.com/ekalinin/github-markdown-toc/m
 xsv_url: "https://github.com/BurntSushi/xsv/releases/download/{{ xsv_version }}/xsv-{{ xsv_version }}-x86_64-unknown-linux-musl.tar.gz"
 ripgrep_url: "https://github.com/BurntSushi/ripgrep/releases/download/{{ ripgrep_version }}/ripgrep-{{ ripgrep_version }}-x86_64-unknown-linux-musl.tar.gz"
 fasd_url: "https://github.com/clvv/fasd/zipball/{{ fasd_version }}"
-direnv_url: "https://github.com/direnv/direnv/releases/download/v{{ direnv_url }}/direnv.linux-amd64"
+direnv_url: "https://github.com/direnv/direnv/releases/download/v{{ direnv_version }}/direnv.linux-amd64"

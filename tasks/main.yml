@@ -379,7 +379,7 @@
     url: "{{ gh_md_toc_url }}"
     dest: "{{ local_bin_dir }}/gh-md-toc"
 
-- name: Github-Markdown-TOC download package
+- name: Direnv download package
   get_url:
     url: "{{ direnv_url }}"
     dest: "{{ local_bin_dir }}/direnv"
