@@ -23,6 +23,30 @@
     path: "{{ local_bin_dir }}"
     state: directory
 
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
+- name: Ripgrep download package
+  get_url:
+    url: "{{ exa_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Ripgrep extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Ripgrep move executable
+  command: mv "{{ extract.files }}/rg" "{{ local_bin_dir }}rg"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Install pip packages
   pip:
     name: "{{ packages.pip }}"
@@ -318,25 +342,6 @@
 
 - name: Kustomize move executable
   command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}kustomize"
-  args:
-    chdir: "{{ temp_dir }}"
-
-- name: Ripgrep download package
-  get_url:
-    url: "{{ exa_url }}"
-    dest: "{{ temp_dir }}"
-  register: download
-
-- name: Ripgrep extract package
-  unarchive:
-    remote_src: true
-    src: "{{ download.dest }}"
-    dest: "{{ temp_dir }}"
-    list_files: true
-  register: extract
-
-- name: Ripgrep move executable
-  command: mv "{{ extract.files }}/rg" "{{ local_bin_dir }}rg"
   args:
     chdir: "{{ temp_dir }}"
 
