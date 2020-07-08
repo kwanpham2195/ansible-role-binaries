@@ -28,6 +28,7 @@
     name: "{{ packages.pip }}"
     extra_args: --user
     state: present
+    executable: pip3
 
 - name: Terraform download package
   get_url:
