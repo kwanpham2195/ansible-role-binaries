@@ -40,3 +40,6 @@ kubeseal_url: "https://github.com/bitnami-labs/sealed-secrets/releases/download/
 argocdcli_url: "https://github.com/argoproj/argo-cd/releases/download/v{{ argocdcli_version }}/argocd-linux-amd64"
 gh_md_toc_url: "https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc"
 xsv_url: "https://github.com/BurntSushi/xsv/releases/download/{{ xsv_version }}/xsv-{{ xsv_version }}-x86_64-unknown-linux-musl.tar.gz"
+ripgrep_url: "https://github.com/BurntSushi/ripgrep/releases/download/{{ ripgrep_version }}/ripgrep-{{ ripgrep_version }}-x86_64-unknown-linux-musl.tar.gz"
+fasd_url: "https://github.com/clvv/fasd/zipball/{{ fasd_version }}"
+direnv_url: "https://github.com/direnv/direnv/releases/download/v{{ direnv_url }}/direnv.linux-amd64"

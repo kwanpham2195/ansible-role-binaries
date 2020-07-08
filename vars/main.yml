@@ -25,3 +25,6 @@ lazygit_version: 0.20.4
 kubeseal_version: 0.12.4
 argocdcli_version: 1.5.6
 xsv_version: 0.13.0
+ripgrep_version: 12.1.1
+fasd_version: 1.0.1
+direnv_version: 2.21.3
