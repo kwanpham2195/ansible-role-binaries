@@ -336,7 +336,7 @@
   register: extract
 
 - name: Ripgrep move executable
-  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}rg"
+  command: mv "{{ extract.files[0]/rg }}" "{{ local_bin_dir }}rg"
   args:
     chdir: "{{ temp_dir }}"
 
@@ -355,7 +355,7 @@
   register: extract
 
 - name: Fasd move executable
-  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}fasd"
+  command: mv "{{ extract.files[0]/fasd }}" "{{ local_bin_dir }}fasd"
   args:
     chdir: "{{ temp_dir }}"
 
