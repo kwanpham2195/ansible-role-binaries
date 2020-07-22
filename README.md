@@ -30,6 +30,7 @@ Installs via binary download:
 - direnv
 - entr
 - nnn
+- lf
 
 Install via pip:
 
@@ -107,6 +108,7 @@ Example Playbook
         direnv_version: 2.21.3
         entr_version: 4.6
         nnn_version: 3.3
+        lf_version: r14
   roles:
     - ansible-role-binaries
 ```
