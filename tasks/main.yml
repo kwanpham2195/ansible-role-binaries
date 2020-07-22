@@ -1,18 +1,5 @@
 ---
 # tasks file for ansible-role-binaries
-- name: Ensure dependencies are installed
-  become: true
-  pacman:
-    update_cache: true
-    name: "{{ item }}"
-    state: present
-  loop:
-    - unzip
-    - tar
-    - python-pip
-    - gcc
-  when: ansible_os_family == "Archlinux"
-
 - name: Ensure tmp directory is present
   file:
     path: "{{ temp_dir }}"

@@ -55,7 +55,7 @@ Following programs must be in the path:
 - pip3
 - gcc
 
-
+For instance have a look at [ansible-role-basic](https://github.com/Allaman/ansible-role-basic)
 
 Role Variables
 --------------
