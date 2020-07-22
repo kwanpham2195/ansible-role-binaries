@@ -47,7 +47,7 @@
 - name: Nnn move executable
   command: mv nnn_static "{{ local_bin_dir }}/nnn"
   args:
-    chdir: "{{ temp_dir }}"
+    chdir: "{{ temp_dir }}/{{ extract.files[0] }}"
 
 - name: Entr download package
   get_url:
