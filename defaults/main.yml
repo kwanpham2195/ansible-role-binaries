@@ -43,3 +43,5 @@ xsv_url: "https://github.com/BurntSushi/xsv/releases/download/{{ xsv_version }}/
 ripgrep_url: "https://github.com/BurntSushi/ripgrep/releases/download/{{ ripgrep_version }}/ripgrep-{{ ripgrep_version }}-x86_64-unknown-linux-musl.tar.gz"
 fasd_url: "https://github.com/clvv/fasd/zipball/{{ fasd_version }}"
 direnv_url: "https://github.com/direnv/direnv/releases/download/v{{ direnv_version }}/direnv.linux-amd64"
+entr_url: "http://eradman.com/entrproject/code/entr-{{ entr_version }}.tar.gz"
+nnn_url: "https://github.com/jarun/nnn/releases/download/v{{ nnn_version }}/nnn-static-{{ nnn_version }}.x86_64.tar.gz"

@@ -1,7 +1,7 @@
 ansible-role-binaries
 =========
 
-Installs several applications via downloading the executable and placing it in Path on Linux based systems. Does **not** install the package via package manager. Additionally, install serveral Python packages via pip as user.
+Installs several applications via downloading the executable and placing it in Path on Linux based systems. Does **not** install the package via package manager. Additionally, install several Python packages via pip as user.
 
 Installs via binary download:
 
@@ -23,8 +23,15 @@ Installs via binary download:
 - kops
 - istioctl
 - mdbook
+- gh-md-toc
+- fasd
+- ripgrep
+- xsv
+- direnv
+- entr
+- nnn
 
-Installs via pip:
+Install via pip:
 
 - flake8
 - testinfra
@@ -45,38 +52,15 @@ Following programs must be in the path:
 
 - unzip
 - tar
-- python-pip
+- pip3
 - gcc
 
-When running on Arch Linux they are installed by this role. (Sudo permissions required)
 
 
 Role Variables
 --------------
 
-
-| Variable| Description | default |
-|---------|-------------|---------|
-| terraform_version | | 0.12.21 |
-| awless_version | | 0.1.11 |
-| helm_version | | 3.1.1 |
-| githubcli_version | | 0.6.2 |
-| stern_version | | 1.11.0 |
-| popeye_version | | 0.7.1 |
-| bat_version | | 0.12.1 |
-| exa_version  | | 0.9.0 |
-| docker_version | only client, not the daemon | 19.03.8 |
-| docker_compose_version | | 1.25.4 |
-| doctl_version | | 1.39.0 |
-| ansible_ver | installed via pip | 2.9.5 |
-| awscli_version | installed via pip | 1.18.2 |
-| kind_version | | 0.7.0 |
-| kubectl_version | | 1.18.0 |
-| k9s_version | | 0.19.1 |
-| kops_version | | 1.16.0 |
-| istioctl_version | | 1.5.1 |
-| mdbook_version | | 0.3.7 |
-
+See Example Playbook
 
 Dependencies
 ------------
@@ -112,6 +96,17 @@ Example Playbook
         kops_version: 1.16.0
         istioctl_version: 1.5.1
         mdbook_version: 0.3.7
+        fluxctl_version: 1.19.0
+        kustomize_version: 3.5.5
+        lazygit_version: 0.20.4
+        kubeseal_version: 0.12.4
+        argocdcli_version: 1.5.6
+        xsv_version: 0.13.0
+        ripgrep_version: 12.1.1
+        fasd_version: 1.0.1
+        direnv_version: 2.21.3
+        entr_version: 4.6
+        nnn_version: 3.3
   roles:
     - ansible-role-binaries
 ```
