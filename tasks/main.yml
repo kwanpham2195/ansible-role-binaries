@@ -40,7 +40,14 @@
   unarchive:
     remote_src: true
     src: "{{ download.dest }}"
-    dest: "{{ local_bin_dir }}/nnn"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Nnn move executable
+  command: mv nnn_static "{{ local_bin_dir }}/nnn"
+  args:
+    chdir: "{{ temp_dir }}"
 
 - name: Entr download package
   get_url:
