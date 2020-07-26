@@ -1,11 +1,11 @@
 ---
 # tasks file for ansible-role-binaries
-- name: Ensure tmp directory is present
+- name: Ensure {{tmp_dir }} is present
   file:
     path: "{{ temp_dir }}"
     state: directory
 
-- name: Ensure local_bin_dir is present
+- name: Ensure {{ local_bin_dir }} is present
   file:
     path: "{{ local_bin_dir }}"
     state: directory
@@ -26,6 +26,16 @@
   get_url:
     url: "{{ diffsofancy_url }}"
     dest: "{{ local_bin_dir }}"
+
+- name: Ensure {{ local_bin_dir }}/lib is present
+  file:
+    path: "{{ local_bin_dir }}"
+    state: directory
+
+- name: Diff-so-fancy lib download package
+  get_url:
+    url: "{{ diffsofancylib_url }}"
+    dest: "{{ local_bin_dir }}/lib"
 
 - name: Lf download package
   get_url:
