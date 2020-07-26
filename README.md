@@ -33,6 +33,7 @@ Installs via binary download:
 - lf
 - diff-so-fancy
 - prettyping
+- rofi
 
 Install via pip:
 
@@ -111,6 +112,7 @@ Example Playbook
         entr_version: 4.6
         nnn_version: 3.3
         lf_version: r14
+        rofi_version: 1.5.4
   roles:
     - ansible-role-binaries
 ```
