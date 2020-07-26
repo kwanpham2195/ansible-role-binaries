@@ -31,6 +31,8 @@ Installs via binary download:
 - entr
 - nnn
 - lf
+- diff-so-fancy
+- prettyping
 
 Install via pip:
 

@@ -17,6 +17,16 @@
     state: present
     executable: pip3
 
+- name: Prettyping download package
+  get_url:
+    url: "{{ prettyping_url }}"
+    dest: "{{ local_bin_dir }}"
+
+- name: Diff-so-fancy download package
+  get_url:
+    url: "{{ diffsofancy_url }}"
+    dest: "{{ local_bin_dir }}"
+
 - name: Lf download package
   get_url:
     url: "{{ lf_url }}"
