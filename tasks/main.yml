@@ -32,7 +32,7 @@
   register: extract
 
 - name: Delta move executable
-  command: mv "{{ extract.files[0] }}/delta" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
