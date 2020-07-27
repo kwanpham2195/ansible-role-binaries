@@ -51,7 +51,7 @@
   register: extract
 
 - name: Rofi build executable
-  shell: mkdir build && cd build && ../configure --prefix={{ ansible_env.HOME }}/.local/ && make install
+  shell: mkdir build && cd build && ../configure --prefix={{ ansible_env.HOME }}/.local/ && make install && cd .. && rm -r build
   args:
     chdir: "{{ temp_dir }}/{{ extract.files[0] }}"
     warn: false
