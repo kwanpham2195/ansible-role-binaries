@@ -51,4 +51,4 @@ rofi_url: "https://github.com/davatorium/rofi/releases/download/{{ rofi_version 
 delta_url: "https://github.com/dandavison/delta/releases/download/{{ delta_version }}/delta-{{ delta_version }}-x86_64-unknown-linux-gnu.tar.gz"
 yq_url: "https://github.com/mikefarah/yq/releases/download/{{ yq_version }}/yq_linux_amd64"
 jq_url: "https://github.com/stedolan/jq/releases/download/jq-{{ jq_version }}/jq-linux64"
-fd_url: "https://github.com/sharkdp/fd/releases/download/{{ fd_version }}/fd-{{ fd_version }}-x86_64-unknown-linux-gnu.tar.gz
+fd_url: "https://github.com/sharkdp/fd/releases/download/{{ fd_version }}/fd-{{ fd_version }}-x86_64-unknown-linux-gnu.tar.gz"
