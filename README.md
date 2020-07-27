@@ -34,6 +34,7 @@ Installs via binary download:
 - diff-so-fancy
 - prettyping
 - rofi
+- delta
 
 Install via pip:
 
@@ -113,6 +114,7 @@ Example Playbook
         nnn_version: 3.3
         lf_version: r14
         rofi_version: 1.5.4
+        delta_version: 0.3.0
   roles:
     - ansible-role-binaries
 ```

@@ -17,6 +17,25 @@
     state: present
     executable: pip3
 
+- name: Delta download package
+  get_url:
+    url: "{{ delta_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Delta extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Delta move executable
+  command: mv "{{ extract.files[0] }}/delta" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Rofi download package
   get_url:
     url: "{{ rofi_url }}"
@@ -514,3 +533,8 @@
     owner: "{{ user_name }}"
     group: "{{ user_group }}"
   when: user_name is defined and user_group is defined
+
+- name: Ensure {{ tmp_dir }} is deleted
+  file:
+    path: "{{ temp_dir }}"
+    state: absent
