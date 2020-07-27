@@ -31,7 +31,6 @@ Installs via binary download:
 - entr
 - nnn
 - lf
-- diff-so-fancy
 - prettyping
 - rofi
 - delta
