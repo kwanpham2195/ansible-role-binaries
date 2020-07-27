@@ -34,6 +34,8 @@ Installs via binary download:
 - prettyping
 - rofi
 - delta
+- yq
+- jq
 
 Install via pip:
 
@@ -114,6 +116,8 @@ Example Playbook
         lf_version: r14
         rofi_version: 1.5.4
         delta_version: 0.3.0
+        yq_version: 3.3.2
+        jq_version: 1.6
   roles:
     - ansible-role-binaries
 ```

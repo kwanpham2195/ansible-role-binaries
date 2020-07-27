@@ -17,6 +17,16 @@
     state: present
     executable: pip3
 
+- name: Yq download package
+  get_url:
+    url: "{{ yq_url }}"
+    dest: "{{ local_bin_dir }}yq"
+
+- name: Jq download package
+  get_url:
+    url: "{{ jq_url }}"
+    dest: "{{ local_bin_dir }}jq"
+
 - name: Delta download package
   get_url:
     url: "{{ delta_url }}"
