@@ -36,6 +36,7 @@ Installs via binary download:
 - delta
 - yq
 - jq
+- fd
 
 Install via pip:
 
@@ -118,6 +119,7 @@ Example Playbook
         delta_version: 0.3.0
         yq_version: 3.3.2
         jq_version: 1.6
+        fd_version: v8.1.1
   roles:
     - ansible-role-binaries
 ```
