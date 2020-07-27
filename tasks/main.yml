@@ -36,7 +36,7 @@
     msg: "{{ extract.files[0] }}"
 
 - name: Fd move executable
-  command: mv "{{ extract.files[0] }}/fd" "{{ local_bin_dir }}/fd"
+  command: mv "{{ extract.files[4] }}" "{{ local_bin_dir }}fd"
   args:
     chdir: "{{ temp_dir }}"
 
