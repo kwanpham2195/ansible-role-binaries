@@ -6,7 +6,6 @@ packages:
     - testinfra
     - molecule
     - "molecule[docker]"
-    - yq
     - ansible=={{ ansible_ver }}
     - awscli=={{ awscli_version }}
     - thefuck
