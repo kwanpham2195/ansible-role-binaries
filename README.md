@@ -19,7 +19,11 @@ Installs via binary download:
 - doctl
 - kind
 - kubectl
+- kubectx
+- kubens
 - k9s
+- fluxctl
+- kustomize
 - kops
 - istioctl
 - mdbook
@@ -37,6 +41,8 @@ Installs via binary download:
 - yq
 - jq
 - fd
+- mgiststatus
+- sdkman
 
 Install via pip:
 

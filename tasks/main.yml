@@ -40,6 +40,26 @@
   args:
     chdir: "{{ temp_dir }}"
 
+- name: Install SDKMAN
+  shell: export SDKMAN_DIR="{{ ansible_env.HOME }}/.local/sdkman" && curl -s "https://get.sdkman.io?rcupdate=false" | bash
+  args:
+    executable: /bin/bash
+
+- name: Kubectx download package
+  get_url:
+    url: "{{ kubectx_url }}"
+    dest: "{{ local_bin_dir }}"
+
+- name: Kubens download package
+  get_url:
+    url: "{{ kubens_url }}"
+    dest: "{{ local_bin_dir }}"
+
+- name: Mgitstatus download package
+  get_url:
+    url: "{{ mgitstatus_url }}"
+    dest: "{{ local_bin_dir }}/mgs"
+
 - name: Yq download package
   get_url:
     url: "{{ yq_url }}"
