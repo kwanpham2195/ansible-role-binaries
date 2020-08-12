@@ -126,6 +126,7 @@ Example Playbook
         yq_version: 3.3.2
         jq_version: 1.6
         fd_version: v8.1.1
+        helm2_version: v2.16.9
   roles:
     - ansible-role-binaries
 ```
