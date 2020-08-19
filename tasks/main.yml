@@ -36,7 +36,7 @@
     msg: "{{ extract.files[0] }}"
 
 - name: Polaris move executable
-  command: mv "{{ extract.files }}/polaris" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[3] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
@@ -59,7 +59,7 @@
     msg: "{{ extract.files[0] }}"
 
 - name: Kubeval move executable
-  command: mv "{{ extract.files }}/kubeval" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
