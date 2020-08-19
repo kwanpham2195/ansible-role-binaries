@@ -11,6 +11,7 @@ Installs via binary download:
 - broot
 - docker
 - helm
+- helm2
 - githubcli
 - stern
 - popeye
@@ -43,6 +44,8 @@ Installs via binary download:
 - fd
 - mgiststatus
 - sdkman
+- kubeval
+- polaris
 
 Install via pip:
 
@@ -127,6 +130,8 @@ Example Playbook
         jq_version: 1.6
         fd_version: v8.1.1
         helm2_version: v2.16.9
+        kubeval_version: 0.15.0
+        polaris_version: 1.2.1
   roles:
     - ansible-role-binaries
 ```

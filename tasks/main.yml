@@ -17,6 +17,52 @@
     state: present
     executable: pip3
 
+- name: Polaris download package
+  get_url:
+    url: "{{ polaris_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Polaris extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files[0] }}"
+
+- name: Polaris move executable
+  command: mv "{{ extract.files[0] }}/polaris" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Kubeval download package
+  get_url:
+    url: "{{ kubeval_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Kubeval extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files[0] }}"
+
+- name: Kubeval move executable
+  command: mv "{{ extract.files[0] }}/kubeval" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Helm2 download package
   get_url:
     url: "{{ helm2_url }}"
@@ -58,10 +104,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files[0] }}"
 
 - name: Fd move executable
   command: mv "{{ extract.files[4] }}" "{{ local_bin_dir }}fd"
