@@ -11,6 +11,8 @@ packages:
     - thefuck
     - neovim-remote
     - httpie
+    - gita
+    - mycli
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
 terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"

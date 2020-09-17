@@ -59,6 +59,8 @@ Install via pip:
 - thefuck
 - neovim-remote
 - httpie
+- gita
+- mycli
 
 
 Requirements
