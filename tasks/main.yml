@@ -17,6 +17,16 @@
     state: present
     executable: pip3
 
+- name: Clone xbanish
+  git:
+    repo: https://github.com/jcs/xbanish.git
+    dest: "{{ temp_dir }}"
+
+- name: Install xbanish
+  command: PREFIX=$HOME/.local/ make install
+  args:
+    chdir: "{{ temp_dir }}/xbanish"
+
 - name: Polaris download package
   get_url:
     url: "{{ polaris_url }}"

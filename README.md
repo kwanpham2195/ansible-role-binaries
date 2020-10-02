@@ -46,6 +46,7 @@ Installs via binary download:
 - sdkman
 - kubeval
 - polaris
+- xbanish
 
 Install via pip:
 
@@ -66,15 +67,6 @@ Install via pip:
 Requirements
 ------------
 
-Following programs must be in the path:
-
-- unzip
-- tar
-- pip3
-- gcc
-
-For instance have a look at [ansible-role-basic](https://github.com/Allaman/ansible-role-basic)
-
 Role Variables
 --------------
 
@@ -83,7 +75,7 @@ See Example Playbook
 Dependencies
 ------------
 
-No dependencies
+- ansible-role-basic
 
 Example Playbook
 ----------------
