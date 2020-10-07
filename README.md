@@ -62,6 +62,7 @@ Install via pip:
 - httpie
 - gita
 - mycli
+- speedtest-cli
 
 
 Requirements
