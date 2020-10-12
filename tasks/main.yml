@@ -27,6 +27,29 @@
   args:
     chdir: "{{ temp_dir }}/xbanish"
 
+- name: Bit download package
+  get_url:
+    url: "{{ bit_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Bit extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files[0] }}"
+
+- name: Bit move executable
+  command: mv "{{ extract.files[3] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Polaris download package
   get_url:
     url: "{{ polaris_url }}"
@@ -40,10 +63,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files[0] }}"
 
 - name: Polaris move executable
   command: mv "{{ extract.files[3] }}" "{{ local_bin_dir }}"

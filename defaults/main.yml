@@ -60,3 +60,4 @@ fd_url: "https://github.com/sharkdp/fd/releases/download/{{ fd_version }}/fd-{{ 
 mgitstatus_url: "https://raw.githubusercontent.com/fboender/multi-git-status/master/mgitstatus"
 kubeval_url: "https://github.com/instrumenta/kubeval/releases/download/{{ kubeval_version }}/kubeval-linux-amd64.tar.gz"
 polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polaris_version }}/polaris_{{ polaris_version }}_linux_amd64.tar.gz"
+bit_url: "https://github.com/chriswalz/bit/releases/download/v{{ bit_version }}/bit_{{ bit_version }}_Linux_x86_64.tar.gz"

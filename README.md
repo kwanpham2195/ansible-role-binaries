@@ -47,6 +47,7 @@ Installs via binary download:
 - kubeval
 - polaris
 - xbanish
+- bit
 
 Install via pip:
 
@@ -127,6 +128,7 @@ Example Playbook
         helm2_version: v2.16.9
         kubeval_version: 0.15.0
         polaris_version: 1.2.1
+        bit_version: 0.5.8
   roles:
     - ansible-role-binaries
 ```
