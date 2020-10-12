@@ -43,10 +43,10 @@
 
 - name: debug
   debug:
-    msg: "{{ extract.files[0] }}"
+    msg: "{{ extract.files }}"
 
 - name: Bit move executable
-  command: mv "{{ extract.files[3] }}" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
