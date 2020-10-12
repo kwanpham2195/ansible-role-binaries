@@ -23,7 +23,7 @@
     dest: "{{ temp_dir }}/xbanish"
 
 - name: Install xbanish
-  command: PREFIX=$HOME/.local/ make install
+  shell: PREFIX=$HOME/.local/ make install
   args:
     chdir: "{{ temp_dir }}/xbanish"
 
