@@ -20,7 +20,7 @@
 - name: Clone xbanish
   git:
     repo: https://github.com/jcs/xbanish.git
-    dest: "{{ temp_dir }}"
+    dest: "{{ temp_dir }}/xbanish"
 
 - name: Install xbanish
   command: PREFIX=$HOME/.local/ make install
