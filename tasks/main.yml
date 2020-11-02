@@ -23,6 +23,14 @@
     dest: "{{ temp_dir }}"
   register: download
 
+- name: Tfswitch extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
 - name: debug
   debug:
     msg: "{{ extract.files }}"
@@ -31,14 +39,6 @@
   command: mv "{{ extract.files[3] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
-
-- name: Tfswitch extract package
-  unarchive:
-    remote_src: true
-    src: "{{ download.dest }}"
-    dest: "{{ temp_dir }}"
-    list_files: true
-  register: extract
 
 - name: Clone xbanish
   git:
