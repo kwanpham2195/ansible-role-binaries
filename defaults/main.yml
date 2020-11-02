@@ -61,4 +61,4 @@ mgitstatus_url: "https://raw.githubusercontent.com/fboender/multi-git-status/mas
 kubeval_url: "https://github.com/instrumenta/kubeval/releases/download/{{ kubeval_version }}/kubeval-linux-amd64.tar.gz"
 polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polaris_version }}/polaris_{{ polaris_version }}_linux_amd64.tar.gz"
 bit_url: "https://github.com/chriswalz/bit/releases/download/v{{ bit_version }}/bit_{{ bit_version }}_Linux_x86_64.tar.gz"
-tfswitch_url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_url}}/terraform-switcher_{{tfswitch_url}}_linux_amd64.tar.gz"
+tfswitch_url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_version}}/terraform-switcher_{{tfswitch_version}}_linux_amd64.tar.gz"
