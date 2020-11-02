@@ -64,6 +64,7 @@ Install via pip:
 - gita
 - mycli
 - speedtest-cli
+- litecli
 
 
 Requirements
