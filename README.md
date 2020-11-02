@@ -5,7 +5,7 @@ Installs several applications via downloading the executable and placing it in P
 
 Installs via binary download:
 
-- terraform
+- tfswitch
 - awless
 - aws
 - broot
@@ -89,7 +89,7 @@ Example Playbook
   connection: local
   pre_tasks:
     - set_fact:
-        terraform_version: 0.12.24
+        tfswitch_version: 0.8.832
         awless_version: 0.1.11
         helm_version: 3.1.1
         githubcli_version: 0.6.2

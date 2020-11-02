@@ -14,9 +14,9 @@ packages:
     - gita
     - mycli
     - speedtest-cli
+    - gitlabber
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
-terraform_url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_amd64.zip"
 awless_url: "https://github.com/wallix/awless/releases/download/v{{ awless_version }}/awless-linux-amd64.tar.gz"
 aws_iam_auth_url: "https://amazon-eks.s3-us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator"
 docker_url: "https://download.docker.com/linux/static/stable/x86_64/docker-{{ docker_version }}.tgz"
@@ -61,3 +61,4 @@ mgitstatus_url: "https://raw.githubusercontent.com/fboender/multi-git-status/mas
 kubeval_url: "https://github.com/instrumenta/kubeval/releases/download/{{ kubeval_version }}/kubeval-linux-amd64.tar.gz"
 polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polaris_version }}/polaris_{{ polaris_version }}_linux_amd64.tar.gz"
 bit_url: "https://github.com/chriswalz/bit/releases/download/v{{ bit_version }}/bit_{{ bit_version }}_Linux_x86_64.tar.gz"
+tfswitch_url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_url}}/terraform-switcher_{{tfswitch_url}}_linux_amd64.tar.gz"

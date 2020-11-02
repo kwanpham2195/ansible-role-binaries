@@ -1,6 +1,5 @@
 ---
 # vars file for ansible-role-binaries
-terraform_version: 0.12.21
 awless_version: 0.1.11
 helm_version: 3.1.1
 githubcli_version: 0.6.2
@@ -40,3 +39,4 @@ helm2_version: v2.16.9
 kubeval_version: 0.15.0
 polaris_version: 1.2.1
 bit_version: 0.5.8
+tfswitch_version: 0.8.832
