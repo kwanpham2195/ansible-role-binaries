@@ -35,7 +35,7 @@
     msg: "{{ extract.files }}"
 
 - name: Dog move executable
-  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[4] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
