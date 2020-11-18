@@ -36,7 +36,7 @@
     msg: "{{ extract.files }}"
 
 - name: Glab move executable
-  command: mv "{{ extract.files[0] }}/glab" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
