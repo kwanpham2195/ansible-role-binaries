@@ -48,6 +48,7 @@ Installs via binary download:
 - polaris
 - xbanish
 - bit
+- glab
 
 Install via pip:
 
@@ -130,6 +131,7 @@ Example Playbook
         kubeval_version: 0.15.0
         polaris_version: 1.2.1
         bit_version: 0.5.8
+        glab_version: 1.11.1
   roles:
     - ansible-role-binaries
 ```

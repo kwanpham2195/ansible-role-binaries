@@ -40,3 +40,4 @@ kubeval_version: 0.15.0
 polaris_version: 1.2.1
 bit_version: 0.5.8
 tfswitch_version: 0.8.832
+glab_version: 1.11.1
