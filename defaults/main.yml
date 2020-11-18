@@ -64,3 +64,4 @@ polaris_url: "https://github.com/FairwindsOps/polaris/releases/download/{{ polar
 bit_url: "https://github.com/chriswalz/bit/releases/download/v{{ bit_version }}/bit_{{ bit_version }}_Linux_x86_64.tar.gz"
 tfswitch_url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_version}}/terraform-switcher_{{tfswitch_version}}_linux_amd64.tar.gz"
 glab_url: "https://github.com/profclems/glab/releases/download/v{{ glab_version}}/glab_{{ glab_version}}_Linux_amd64.tar.gz"
+dog_url: "https://github.com/ogham/dog/releases/download/{{ dog_version }}/dog-{{ dog_version }}-x86_64-unknown-linux-gnu.zip"

@@ -49,6 +49,7 @@ Installs via binary download:
 - xbanish
 - bit
 - glab
+- dog
 
 Install via pip:
 
@@ -132,6 +133,7 @@ Example Playbook
         polaris_version: 1.2.1
         bit_version: 0.5.8
         glab_version: 1.11.1
+        dog_version: v0.1.0
   roles:
     - ansible-role-binaries
 ```
