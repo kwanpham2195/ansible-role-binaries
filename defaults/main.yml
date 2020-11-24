@@ -65,3 +65,4 @@ bit_url: "https://github.com/chriswalz/bit/releases/download/v{{ bit_version }}/
 tfswitch_url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_version}}/terraform-switcher_{{tfswitch_version}}_linux_amd64.tar.gz"
 glab_url: "https://github.com/profclems/glab/releases/download/v{{ glab_version}}/glab_{{ glab_version}}_Linux_amd64.tar.gz"
 dog_url: "https://github.com/ogham/dog/releases/download/{{ dog_version }}/dog-{{ dog_version }}-x86_64-unknown-linux-gnu.zip"
+tflint_url: "https://github.com/terraform-linters/tflint/releases/download/{{ tflint_version }}/tflint_linux_amd64.zip"

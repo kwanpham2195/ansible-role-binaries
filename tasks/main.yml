@@ -16,6 +16,25 @@
     extra_args: --user
     state: present
     executable: pip3
+
+- name: Tflint download package
+  get_url:
+    url: "{{ tflint_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Tflint extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ local_bin_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
 - name: Dog download package
   get_url:
     url: "{{ dog_url }}"
@@ -29,10 +48,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
 
 - name: Dog move executable
   command: mv "{{ extract.files[4] }}" "{{ local_bin_dir }}"

@@ -42,3 +42,4 @@ bit_version: 0.5.8
 tfswitch_version: 0.8.832
 glab_version: 1.11.1
 dog_version: v0.1.0
+tflint_version: v0.21.0

@@ -50,6 +50,7 @@ Installs via binary download:
 - bit
 - glab
 - dog
+- tflint
 
 Install via pip:
 
@@ -134,6 +135,7 @@ Example Playbook
         bit_version: 0.5.8
         glab_version: 1.11.1
         dog_version: v0.1.0
+        tflint_version: v0.21.0
   roles:
     - ansible-role-binaries
 ```
