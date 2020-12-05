@@ -68,6 +68,8 @@ Install via pip:
 - mycli
 - speedtest-cli
 - litecli
+- s4cmd
+- k6
 
 
 Requirements
@@ -136,6 +138,7 @@ Example Playbook
         glab_version: 1.11.1
         dog_version: v0.1.0
         tflint_version: v0.21.0
+        k6_version: v0.29.0
   roles:
     - ansible-role-binaries
 ```
