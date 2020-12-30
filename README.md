@@ -69,7 +69,7 @@ Install via pip:
 - speedtest-cli
 - litecli
 - s4cmd
-- k6
+- ueberzug
 
 
 Requirements
