@@ -274,26 +274,6 @@
   args:
     chdir: "{{ temp_dir }}"
 
-- name: Rofi download package
-  get_url:
-    url: "{{ rofi_url }}"
-    dest: "{{ temp_dir }}"
-  register: download
-
-- name: Rofi extract package
-  unarchive:
-    remote_src: true
-    src: "{{ download.dest }}"
-    dest: "{{ temp_dir }}"
-    list_files: true
-  register: extract
-
-- name: Rofi build executable
-  shell: mkdir build && cd build && ../configure --prefix={{ ansible_env.HOME }}/.local/ && make install && cd .. && rm -r build
-  args:
-    chdir: "{{ temp_dir }}/{{ extract.files[0] }}"
-    warn: false
-
 - name: Prettyping download package
   get_url:
     url: "{{ prettyping_url }}"

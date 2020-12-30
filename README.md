@@ -37,7 +37,6 @@ Installs via binary download:
 - nnn
 - lf
 - prettyping
-- rofi
 - delta
 - yq
 - jq
@@ -124,7 +123,6 @@ Example Playbook
         entr_version: 4.6
         nnn_version: 3.3
         lf_version: r14
-        rofi_version: 1.5.4
         delta_version: 0.3.0
         yq_version: 3.3.2
         jq_version: 1.6
