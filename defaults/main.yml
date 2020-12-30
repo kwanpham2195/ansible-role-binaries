@@ -1,12 +1,10 @@
 ---
-#https://github.com/davatorium/rofi/releases/download/1.5.4/rofi-1.5.4.tar.gz defaults file for ansible-role-binaries
 packages:
   pip:
     - flake8
     - testinfra
     - molecule
     - "molecule[docker]"
-    - ansible=={{ ansible_ver }}
     - awscli=={{ awscli_version }}
     - thefuck
     - neovim-remote

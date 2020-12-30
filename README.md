@@ -59,7 +59,6 @@ Install via pip:
 - molecule
 - "molecule[docker]"
 - yq
-- ansible
 - awscli
 - thefuck
 - neovim-remote
@@ -106,7 +105,6 @@ Example Playbook
         docker_version: 19.03.8
         docker_compose_version: 1.25.4
         doctl_version: 1.39.0
-        ansible_ver: 2.9.6
         awscli_version: 1.18.2
         kind_version: 0.7.0
         kubectl_version: 1.18.0
