@@ -16,6 +16,8 @@ packages:
     - litecli
     - s4cmd
     - ueberzug
+    - python-rofi
+    - yamllint
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
 awless_url: "https://github.com/wallix/awless/releases/download/v{{ awless_version }}/awless-linux-amd64.tar.gz"
