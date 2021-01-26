@@ -135,6 +135,8 @@ Example Playbook
         dog_version: v0.1.0
         tflint_version: v0.21.0
         k6_version: v0.29.0
+        kubectx_version: v0.9.1
+        kubens_version: v0.9.1
   roles:
     - ansible-role-binaries
 ```

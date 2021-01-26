@@ -18,6 +18,7 @@ packages:
     - ueberzug
     - python-rofi
     - yamllint
+    - jedi
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
 awless_url: "https://github.com/wallix/awless/releases/download/v{{ awless_version }}/awless-linux-amd64.tar.gz"
@@ -36,8 +37,8 @@ kind_url: "https://github.com/kubernetes-sigs/kind/releases/download/v{{ kind_ve
 kubectl_url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
 k9s_url: "https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k9s_Linux_x86_64.tar.gz"
 kops_url: "https://github.com/kubernetes/kops/releases/download/v{{ kops_version }}/kops-linux-amd64"
-kubectx_url: "https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx"
-kubens_url: "https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens"
+kubens_url: "https://github.com/ahmetb/kubectx/releases/download/{{ kubens_version }}/kubens"
+kubectx_url: "https://github.com/ahmetb/kubectx/releases/download/{{ kubectx_version }}/kubectx"
 istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istioctl-{{ istioctl_version }}-linux.tar.gz"
 mdbook_url: "https://github.com/rust-lang/mdBook/releases/download/v{{ mdbook_version }}/mdbook-v{{ mdbook_version }}-x86_64-unknown-linux-gnu.tar.gz"
 broot_url: "https://dystroy.org/broot/download/x86_64-linux/broot"
