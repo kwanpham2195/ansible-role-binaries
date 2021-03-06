@@ -45,3 +45,4 @@ tflint_version: v0.21.0
 k6_version: v0.29.0
 kubectx_version: v0.9.1
 kubens_version: v0.9.1
+pet_version: 0.3.6

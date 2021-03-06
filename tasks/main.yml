@@ -17,6 +17,39 @@
     state: present
     executable: pip3
 
+- name: Clone dragon
+  git:
+    repo: https://github.com/mwh/dragon.git
+    dest: "{{ temp_dir }}/dragon"
+
+- name: Install dragon
+  shell: make PREFIX=$HOME/.local/ install
+  args:
+    chdir: "{{ temp_dir }}/dragon"
+
+- name: Pet download package
+  get_url:
+    url: "{{ pet_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Pet extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
+- name: Pet move executable
+  command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: K6 download package
   get_url:
     url: "{{ k6_url }}"
@@ -30,10 +63,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
 
 - name: K6 move executable
   command: mv "{{ extract.files[0] }}/k6" "{{ local_bin_dir }}"
