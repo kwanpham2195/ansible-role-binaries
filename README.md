@@ -16,6 +16,7 @@ Installs via binary download:
 - doctl
 - dog
 - dragon
+- duf
 - entr
 - exa
 - fasd
@@ -127,7 +128,7 @@ Example Playbook
         direnv_version: 2.21.3
         entr_version: 4.6
         nnn_version: 3.3
-        lf_version: r14
+        lf_version: r21
         delta_version: 0.3.0
         yq_version: 3.3.2
         jq_version: 1.6
@@ -140,6 +141,10 @@ Example Playbook
         dog_version: v0.1.0
         tflint_version: v0.21.0
         k6_version: v0.29.0
+        kubectx_version: v0.9.1
+        kubens_version: v0.9.1
+        duf_version: 0.6.0
+        pet_version: 0.3.6
         kubectx_version: v0.9.1
         kubens_version: v0.9.1
   roles:

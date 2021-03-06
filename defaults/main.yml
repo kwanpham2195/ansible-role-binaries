@@ -71,3 +71,4 @@ dog_url: "https://github.com/ogham/dog/releases/download/{{ dog_version }}/dog-{
 tflint_url: "https://github.com/terraform-linters/tflint/releases/download/{{ tflint_version }}/tflint_linux_amd64.zip"
 k6_url: "https://github.com/loadimpact/k6/releases/download/{{ k6_version }}/k6-{{ k6_version }}-linux64.tar.gz"
 pet_url: "https://github.com/knqyf263/pet/releases/download/v{{ pet_version }}/pet_{{ pet_version }}_linux_amd64.tar.gz"
+duf_url: "https://github.com/muesli/duf/releases/download/v{{ duf_version }}/duf_{{ duf_version }}_linux_x86_64.tar.gz"

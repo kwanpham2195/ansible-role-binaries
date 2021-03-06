@@ -46,3 +46,4 @@ k6_version: v0.29.0
 kubectx_version: v0.9.1
 kubens_version: v0.9.1
 pet_version: 0.3.6
+duf_version: 0.6.0
