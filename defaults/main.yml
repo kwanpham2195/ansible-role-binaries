@@ -9,7 +9,6 @@ packages:
     - gitlabber
     - httpie
     - jedi
-    - litecli
     - molecule
     - mycli
     - neovim-remote

@@ -64,7 +64,6 @@ Install via pip:
 - gitlabber
 - httpie
 - jedi
-- litecli
 - molecule
 - mycli
 - neovim-remote
