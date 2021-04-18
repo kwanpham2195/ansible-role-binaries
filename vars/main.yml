@@ -47,3 +47,7 @@ kubectx_version: v0.9.1
 kubens_version: v0.9.1
 pet_version: 0.3.6
 duf_version: 0.6.0
+scc_version: 3.0.0
+sd_version: 0.7.6
+gitui_version: 0.14.0
+slack_term_version: 0.5.0

@@ -17,6 +17,7 @@ Installs via binary download:
 - dog
 - dragon
 - duf
+- duf
 - entr
 - exa
 - fasd
@@ -24,6 +25,7 @@ Installs via binary download:
 - fluxctl
 - gh-md-toc
 - githubcli
+- gitui
 - glab
 - helm
 - helm2
@@ -40,14 +42,17 @@ Installs via binary download:
 - kustomize
 - lf
 - mdbook
-- mgiststatus
+- mgitstatus
 - nnn
 - pet
 - polaris
 - popeye
 - prettyping
 - ripgrep
+- scc
+- sd
 - sdkman
+- slack-term
 - stern
 - tflint
 - tfswitch
@@ -146,6 +151,10 @@ Example Playbook
         pet_version: 0.3.6
         kubectx_version: v0.9.1
         kubens_version: v0.9.1
+        scc_version: 3.0.0
+        sd_version: 0.7.6
+        gitui_version: 0.14.0
+        slack_term_version: 0.5.0
   roles:
     - ansible-role-binaries
 ```

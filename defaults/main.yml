@@ -8,17 +8,22 @@ packages:
     - gita
     - gitlabber
     - httpie
+    - ipython
     - jedi
+    - khal
+    - khard
     - molecule
     - mycli
     - neovim-remote
     - python-rofi
+    - selenium
     - s4cmd
     - speedtest-cli
     - testinfra
     - thefuck
     - ueberzug
     - yamllint
+    - vdirsyncer
 temp_dir: /tmp/ansible-role-binaries
 local_bin_dir: ~/.local/bin/
 awless_url: "https://github.com/wallix/awless/releases/download/v{{ awless_version }}/awless-linux-amd64.tar.gz"
@@ -71,3 +76,7 @@ tflint_url: "https://github.com/terraform-linters/tflint/releases/download/{{ tf
 k6_url: "https://github.com/loadimpact/k6/releases/download/{{ k6_version }}/k6-{{ k6_version }}-linux64.tar.gz"
 pet_url: "https://github.com/knqyf263/pet/releases/download/v{{ pet_version }}/pet_{{ pet_version }}_linux_amd64.tar.gz"
 duf_url: "https://github.com/muesli/duf/releases/download/v{{ duf_version }}/duf_{{ duf_version }}_linux_x86_64.tar.gz"
+scc_url: "https://github.com/boyter/scc/releases/download/v{{ scc_version }}/scc-{{ scc_version }}-x86_64-unknown-linux.zip"
+sd_url: "https://github.com/chmln/sd/releases/download/v{{ sd_version }}/sd-v{{ sd_version }}-x86_64-unknown-linux-gnu"
+gitui_url: "https://github.com/extrawurst/gitui/releases/download/v{{ gitui_version }}/gitui-linux-musl.tar.gz"
+slack_term_url: "https://github.com/erroneousboat/slack-term/releases/download/v{{ slack_term_version }}/slack-term-linux-amd64"
