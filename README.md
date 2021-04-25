@@ -29,6 +29,7 @@ Installs via binary download:
 - glab
 - helm
 - helm2
+- highlight-pointer
 - istioctl
 - jq
 - k6
@@ -62,23 +63,30 @@ Installs via binary download:
 
 Install via pip:
 
+- "molecule[docker]"
 - aws-shell
 - awscli
 - flake8
 - gita
 - gitlabber
+- grip
 - httpie
+- ipython
 - jedi
+- khal
+- khard
 - molecule
 - mycli
 - neovim-remote
 - python-rofi
+- selenium
 - s4cmd
 - speedtest-cli
 - testinfra
 - thefuck
 - ueberzug
 - yamllint
+- vdirsyncer
 
 Requirements
 ------------

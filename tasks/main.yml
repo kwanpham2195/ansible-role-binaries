@@ -17,6 +17,11 @@
     state: present
     executable: pip3
 
+- name: Highlight-Pointer download package
+  get_url:
+    url: "{{ highlight_pointer_url }}"
+    dest: "{{ local_bin_dir }}/highlight-pointer"
+
 - name: Slack-term download package
   get_url:
     url: "{{ slack_term_url }}"
