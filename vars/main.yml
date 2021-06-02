@@ -53,4 +53,4 @@ stern_version: 1.11.0
 tflint_version: v0.21.0
 tfswitch_version: 0.8.832
 xsv_version: 0.13.0
-yq_version: 3.3.2
+yq_version: 4.9.3

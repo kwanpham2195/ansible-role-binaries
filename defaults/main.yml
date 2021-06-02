@@ -63,7 +63,7 @@ nnn_url: "https://github.com/jarun/nnn/releases/download/v{{ nnn_version }}/nnn-
 lf_url: "https://github.com/gokcehan/lf/releases/download/{{ lf_version }}/lf-linux-amd64.tar.gz"
 prettyping_url: "https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping"
 delta_url: "https://github.com/dandavison/delta/releases/download/{{ delta_version }}/delta-{{ delta_version }}-x86_64-unknown-linux-gnu.tar.gz"
-yq_url: "https://github.com/mikefarah/yq/releases/download/{{ yq_version }}/yq_linux_amd64"
+yq_url: "https://github.com/mikefarah/yq/releases/download/v{{ yq_version }}/yq_linux_amd64"
 jq_url: "https://github.com/stedolan/jq/releases/download/jq-{{ jq_version }}/jq-linux64"
 fd_url: "https://github.com/sharkdp/fd/releases/download/{{ fd_version }}/fd-{{ fd_version }}-x86_64-unknown-linux-gnu.tar.gz"
 mgitstatus_url: "https://raw.githubusercontent.com/fboender/multi-git-status/master/mgitstatus"
