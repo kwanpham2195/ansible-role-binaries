@@ -42,7 +42,7 @@
 
 - name: Git-quick-stats download package
   get_url:
-    url: "{{ git_quick_stats }}"
+    url: "{{ git_quick_stats_url }}"
     dest: "{{ local_bin_dir }}"
 
 - name: Highlight-Pointer download package
