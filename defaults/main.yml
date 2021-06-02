@@ -82,3 +82,6 @@ sd_url: "https://github.com/chmln/sd/releases/download/v{{ sd_version }}/sd-v{{ 
 gitui_url: "https://github.com/extrawurst/gitui/releases/download/v{{ gitui_version }}/gitui-linux-musl.tar.gz"
 slack_term_url: "https://github.com/erroneousboat/slack-term/releases/download/v{{ slack_term_version }}/slack-term-linux-amd64"
 highlight_pointer_url: "https://github.com/swillner/highlight-pointer/releases/download/v{{ highlight_pointer_version }}/highlight-pointer"
+git_quick_stats_url: "https://raw.githubusercontent.com/arzzen/git-quick-stats/master/git-quick-stats"
+dive_url: "https://github.com/wagoodman/dive/releases/download/v{{ dive_version }}/dive_{{ dive_version }}_linux_amd64.tar.gz"
+kube_linter_url: "https://github.com/stackrox/kube-linter/releases/download/${{ kube_linter_version }}/kube-linter-linux.tar.gz"

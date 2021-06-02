@@ -17,6 +17,34 @@
     state: present
     executable: pip3
 
+- name: Kube-linter download package
+  get_url:
+    url: "{{ kube_linter_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Kube-linter extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
+- name: Kube-linter move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Git-quick-stats download package
+  get_url:
+    url: "{{ git_quick_stats }}"
+    dest: "{{ local_bin_dir }}"
+
 - name: Highlight-Pointer download package
   get_url:
     url: "{{ highlight_pointer_url }}"
@@ -26,6 +54,25 @@
   get_url:
     url: "{{ slack_term_url }}"
     dest: "{{ local_bin_dir }}/slack-term"
+
+- name: Dive download package
+  get_url:
+    url: "{{ dive_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Dive extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Dive move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
 
 - name: Gitui download package
   get_url:
@@ -40,10 +87,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
 
 - name: Gitui move executable
   command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"

@@ -12,6 +12,7 @@ Installs via binary download:
 - broot
 - delta
 - direnv
+- dive
 - docker
 - doctl
 - dog
@@ -24,6 +25,7 @@ Installs via binary download:
 - fd
 - fluxctl
 - gh-md-toc
+- git-quick-stats
 - githubcli
 - gitui
 - glab
@@ -36,6 +38,7 @@ Installs via binary download:
 - k9s
 - kind
 - kops
+- kube-linter
 - kubectl
 - kubectx
 - kubens
@@ -126,6 +129,7 @@ Example Playbook
         kind_version: 0.7.0
         kubectl_version: 1.18.0
         k9s_version: 0.19.1
+        kube_linter_version: 0.2.2
         kops_version: 1.16.0
         istioctl_version: 1.5.1
         mdbook_version: 0.3.7
@@ -138,6 +142,7 @@ Example Playbook
         ripgrep_version: 12.1.1
         fasd_version: 1.0.1
         direnv_version: 2.21.3
+        dive_version: 0.10.0
         entr_version: 4.6
         nnn_version: 3.3
         lf_version: r21
