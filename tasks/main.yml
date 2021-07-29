@@ -565,12 +565,8 @@
     list_files: true
   register: extract
 
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
-
 - name: Istioctl move executable
-  command: mv istioctl/bin/istioctl "{{ local_bin_dir }}"
+  command: mv istioctl "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
