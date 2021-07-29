@@ -45,7 +45,7 @@ k9s_url: "https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k
 kops_url: "https://github.com/kubernetes/kops/releases/download/v{{ kops_version }}/kops-linux-amd64"
 kubens_url: "https://github.com/ahmetb/kubectx/releases/download/{{ kubens_version }}/kubens"
 kubectx_url: "https://github.com/ahmetb/kubectx/releases/download/{{ kubectx_version }}/kubectx"
-istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istioctl-{{ istioctl_version }}-linux.tar.gz"
+istioctl_url: "https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-linux-amd64.tar.gz"
 mdbook_url: "https://github.com/rust-lang/mdBook/releases/download/v{{ mdbook_version }}/mdbook-v{{ mdbook_version }}-x86_64-unknown-linux-gnu.tar.gz"
 broot_url: "https://dystroy.org/broot/download/x86_64-linux/broot"
 fluxctl_url: "https://github.com/fluxcd/flux/releases/download/{{ fluxctl_version }}/fluxctl_linux_amd64"
