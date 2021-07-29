@@ -31,10 +31,6 @@
     list_files: true
   register: extract
 
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
-
 - name: Kube-linter move executable
   command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
   args:
@@ -568,6 +564,10 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
 
 - name: Istioctl move executable
   command: mv istioctl/bin/istioctl "{{ local_bin_dir }}"
