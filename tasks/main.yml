@@ -10,13 +10,6 @@
     path: "{{ local_bin_dir }}"
     state: directory
 
-- name: Install pip packages
-  pip:
-    name: "{{ packages.pip }}"
-    extra_args: --user
-    state: present
-    executable: pip3
-
 - name: Kube-linter download package
   get_url:
     url: "{{ kube_linter_url }}"

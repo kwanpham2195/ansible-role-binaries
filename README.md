@@ -1,111 +1,18 @@
-ansible-role-binaries
-=========
+# ansible-role-binaries
 
-Installs several applications via downloading the executable and placing it in Path on Linux based systems. Does **not** install the package via package manager. Additionally, install several Python packages via pip as user.
+Installs several applications via downloading the executable and placing it in Path on Linux based systems. Only x86_64 supported! Does **not** install the package via package manager.
 
-Installs via binary download:
+## Requirements
 
-- awless
-- aws
-- bat
-- bit
-- broot
-- delta
-- direnv
-- dive
-- docker
-- doctl
-- dog
-- dragon
-- duf
-- duf
-- entr
-- exa
-- fasd
-- fd
-- fluxctl
-- gh-md-toc
-- git-quick-stats
-- githubcli
-- gitui
-- glab
-- helm
-- helm2
-- highlight-pointer
-- istioctl
-- jq
-- k6
-- k9s
-- kind
-- kops
-- kube-linter
-- kubectl
-- kubectx
-- kubens
-- kubeval
-- kustomize
-- lf
-- mdbook
-- mgitstatus
-- nnn
-- pet
-- polaris
-- popeye
-- prettyping
-- ripgrep
-- scc
-- sd
-- sdkman
-- slack-term
-- stern
-- tflint
-- tfswitch
-- xbanish
-- xsv
-- yq
-
-Install via pip:
-
-- "molecule[docker]"
-- aws-shell
-- awscli
-- flake8
-- gita
-- gitlabber
-- grip
-- httpie
-- ipython
-- jedi
-- khal
-- khard
-- molecule
-- mycli
-- neovim-remote
-- python-rofi
-- selenium
-- s4cmd
-- speedtest-cli
-- testinfra
-- thefuck
-- ueberzug
-- yamllint
-- vdirsyncer
-
-Requirements
-------------
-
-Role Variables
---------------
+## Role Variables
 
 See Example Playbook
 
-Dependencies
-------------
+## Dependencies
 
 - ansible-role-basic
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```
 ---
@@ -172,7 +79,6 @@ Example Playbook
     - ansible-role-binaries
 ```
 
-License
--------
+## License
 
 MIT
