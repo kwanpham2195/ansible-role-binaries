@@ -2,6 +2,10 @@
 
 Installs several applications via downloading the executable and placing it in Path on Linux based systems. Only x86_64 supported! Does **not** install the package via package manager.
 
+## Test
+
+Run `molecule test` to test this role via docker
+
 ## Requirements
 
 ## Role Variables
