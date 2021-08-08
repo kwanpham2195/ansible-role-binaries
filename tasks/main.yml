@@ -10,6 +10,67 @@
     path: "{{ local_bin_dir }}"
     state: directory
 
+- name: Zoxide download package
+  get_url:
+    url: "{{ zoxide_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Zoxide extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
+- name: Zoxide move executable
+  command: mv "{{ extract.files[0] }}/zoxide" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Tokei download package
+  get_url:
+    url: "{{ tokei_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Tokei extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Tokei move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Dust download package
+  get_url:
+    url: "{{ dust_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Dust extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Dust move executable
+  command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Dyff download package
   get_url:
     url: "{{ dyff_url }}"
@@ -23,10 +84,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
 
 - name: Dyff move executable
   command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
