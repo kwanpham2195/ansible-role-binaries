@@ -79,6 +79,7 @@ See Example Playbook
         sd_version: 0.7.6
         gitui_version: 0.14.0
         slack_term_version: 0.5.0
+        dyff_version: 1.4.3
   roles:
     - ansible-role-binaries
 ```

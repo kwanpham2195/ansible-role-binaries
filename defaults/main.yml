@@ -59,3 +59,4 @@ highlight_pointer_url: "https://github.com/swillner/highlight-pointer/releases/d
 git_quick_stats_url: "https://raw.githubusercontent.com/arzzen/git-quick-stats/master/git-quick-stats"
 dive_url: "https://github.com/wagoodman/dive/releases/download/v{{ dive_version }}/dive_{{ dive_version }}_linux_amd64.tar.gz"
 kube_linter_url: "https://github.com/stackrox/kube-linter/releases/download/{{ kube_linter_version }}/kube-linter-linux.tar.gz"
+dyff_url: "https://github.com/homeport/dyff/releases/download/v{{ dyff_version }}/dyff_{{ dyff_version }}_linux_amd64.tar.gz"

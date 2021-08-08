@@ -10,6 +10,25 @@
     path: "{{ local_bin_dir }}"
     state: directory
 
+- name: Dyff download package
+  get_url:
+    url: "{{ dyff_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Dyff extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Dyff move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Kube-linter download package
   get_url:
     url: "{{ kube_linter_url }}"

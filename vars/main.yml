@@ -14,6 +14,7 @@ docker_version: 19.03.8
 doctl_version: 1.39.0
 dog_version: v0.1.0
 duf_version: 0.6.0
+dyff_version: 1.4.3
 entr_version: 4.6
 exa_version: 0.9.0
 fasd_version: 1.0.1
