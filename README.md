@@ -30,6 +30,7 @@ See Example Playbook
         awscli_version: 1.18.2
         bat_version: 0.12.1
         bit_version: 0.5.8
+        bottom_version: 0.6.3
         delta_version: 0.3.0
         direnv_version: 2.21.3
         dive_version: 0.10.0
