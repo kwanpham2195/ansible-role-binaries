@@ -24,8 +24,12 @@
     list_files: true
   register: extract
 
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
 - name: Dyff move executable
-  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
   args:
     chdir: "{{ temp_dir }}"
 
@@ -238,10 +242,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
 
 - name: Glab move executable
   command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"
