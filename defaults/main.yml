@@ -14,6 +14,7 @@ docker_compose_url: "https://github.com/docker/compose/releases/download/{{ dock
 docker_url: "https://download.docker.com/linux/static/stable/x86_64/docker-{{ docker_version }}.tgz"
 doctl_url: "https://github.com/digitalocean/doctl/releases/download/v{{ doctl_version }}/doctl-{{ doctl_version }}-linux-amd64.tar.gz"
 dog_url: "https://github.com/ogham/dog/releases/download/{{ dog_version }}/dog-{{ dog_version }}-x86_64-unknown-linux-gnu.zip"
+dua_url: "https://github.com/Byron/dua-cli/releases/download/v{{ dua_version }}/dua-v{{ dua_version }}-x86_64-unknown-linux-musl.tar.gz"
 duf_url: "https://github.com/muesli/duf/releases/download/v{{ duf_version }}/duf_{{ duf_version }}_linux_x86_64.tar.gz"
 dust_url: "https://github.com/bootandy/dust/releases/download/v{{ dust_version }}/dust-v{{ dust_version }}-x86_64-unknown-linux-gnu.tar.gz"
 dyff_url: "https://github.com/homeport/dyff/releases/download/v{{ dyff_version }}/dyff_{{ dyff_version }}_linux_amd64.tar.gz"

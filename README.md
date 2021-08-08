@@ -37,6 +37,7 @@ See Example Playbook
         docker_version: 19.03.8
         doctl_version: 1.39.0
         dog_version: v0.1.0
+        dua_version: 2.14.4
         duf_version: 0.6.0
         dust_version: 0.6.2
         dyff_version: 1.4.3

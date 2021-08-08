@@ -3,6 +3,11 @@ import stat
 
 def test_exist_zoxide(host):
     home = host.user("root").home
+    assert host.file(home+"/.local/bin/dua").exists
+    assert host.file(home+"/.local/bin/dua").mode == 0o755
+
+def test_exist_zoxide(host):
+    home = host.user("root").home
     assert host.file(home+"/.local/bin/zoxide").exists
     assert host.file(home+"/.local/bin/zoxide").mode == 0o755
 
