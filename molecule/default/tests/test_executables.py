@@ -1,6 +1,11 @@
 import os
 import stat
 
+def test_exist_viddy(host):
+    home = host.user("root").home
+    assert host.file(home+"/.local/bin/viddy").exists
+    assert host.file(home+"/.local/bin/viddy").mode == 0o755
+
 def test_exist_bottom(host):
     home = host.user("root").home
     assert host.file(home+"/.local/bin/btm").exists

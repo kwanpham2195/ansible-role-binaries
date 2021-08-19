@@ -82,6 +82,7 @@ See Example Playbook
         tflint_version: v0.21.0
         tfswitch_version: 0.8.832
         tokei_version: 12.1.2
+        viddy_version: 0.1.6
         xsv_version: 0.13.0
         yq_version: 3.3.2
         zoxide_version: 0.7.3
