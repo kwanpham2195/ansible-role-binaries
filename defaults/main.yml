@@ -59,6 +59,8 @@ scc_url: "https://github.com/boyter/scc/releases/download/v{{ scc_version }}/scc
 sd_url: "https://github.com/chmln/sd/releases/download/v{{ sd_version }}/sd-v{{ sd_version }}-x86_64-unknown-linux-gnu"
 slack_term_url: "https://github.com/erroneousboat/slack-term/releases/download/v{{ slack_term_version }}/slack-term-linux-amd64"
 stern_url: "https://github.com/wercker/stern/releases/download/{{ stern_version }}/stern_linux_amd64"
+tectonic_url: "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%40{{ tectonic_version }}/tectonic-{{ tectonic_version }}-x86_64-unknown-linux-gnu.tar.gz"
+texlab_url: "https://github.com/latex-lsp/texlab/releases/download/{{ texlab_version }}/texlab-x86_64-linux.tar.gz"
 tflint_url: "https://github.com/terraform-linters/tflint/releases/download/{{ tflint_version }}/tflint_linux_amd64.zip"
 tfswitch_url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_version}}/terraform-switcher_{{tfswitch_version}}_linux_amd64.tar.gz"
 tokei_url: "https://github.com/XAMPPRocky/tokei/releases/download/v{{ tokei_version }}/tokei-x86_64-unknown-linux-gnu.tar.gz"

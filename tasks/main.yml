@@ -10,6 +10,48 @@
     path: "{{ local_bin_dir }}"
     state: directory
 
+- name: Texlab download package
+  get_url:
+    url: "{{ texlab_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Texlab extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: debug
+  debug:
+    msg: "{{ extract.files }}"
+
+- name: Texlab move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
+- name: Tectonic download package
+  get_url:
+    url: "{{ tectonic_url }}"
+    dest: "{{ temp_dir }}"
+  register: download
+
+- name: Tectonic extract package
+  unarchive:
+    remote_src: true
+    src: "{{ download.dest }}"
+    dest: "{{ temp_dir }}"
+    list_files: true
+  register: extract
+
+- name: Tectonic move executable
+  command: mv "{{ extract.files[0] }}" "{{ local_bin_dir }}"
+  args:
+    chdir: "{{ temp_dir }}"
+
 - name: Viddy download package
   get_url:
     url: "{{ viddy_url }}"
@@ -23,10 +65,6 @@
     dest: "{{ temp_dir }}"
     list_files: true
   register: extract
-
-- name: debug
-  debug:
-    msg: "{{ extract.files }}"
 
 - name: viddy move executable
   command: mv "{{ extract.files[2] }}" "{{ local_bin_dir }}"

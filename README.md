@@ -79,6 +79,8 @@ See Example Playbook
         sd_version: 0.7.6
         slack_term_version: 0.5.0
         stern_version: 1.11.0
+        tectonic_version: 0.7.1
+        texlab_version: v3.2.0
         tflint_version: v0.21.0
         tfswitch_version: 0.8.832
         tokei_version: 12.1.2

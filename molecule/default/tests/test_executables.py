@@ -1,6 +1,16 @@
 import os
 import stat
 
+def test_exist_texlab(host):
+    home = host.user("root").home
+    assert host.file(home+"/.local/bin/texlab").exists
+    assert host.file(home+"/.local/bin/texlab").mode == 0o755
+
+def test_exist_tectonic(host):
+    home = host.user("root").home
+    assert host.file(home+"/.local/bin/tectonic").exists
+    assert host.file(home+"/.local/bin/tectonic").mode == 0o755
+
 def test_exist_viddy(host):
     home = host.user("root").home
     assert host.file(home+"/.local/bin/viddy").exists
