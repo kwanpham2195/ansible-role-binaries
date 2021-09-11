@@ -1,6 +1,10 @@
 # ansible-role-binaries
 
-Installs several applications via downloading the executable and placing it in Path on Linux based systems. Only x86_64 supported! Does **not** install the package via package manager.
+Installs several applications via downloading and placing the executable in PATH on Linux based systems. Does **not** install the package via package manager. Please be aware that this comes with disadvantages, too.
+
+Why not [eget](https://github.com/zyedidia/eget)?
+
+Although I think this is an awesome project I prefer to define my setup in a more declarative way and additionally Ansible gives me also more flexibility.
 
 ## Test
 
@@ -10,7 +14,13 @@ Run `molecule test` to test this role via docker
 
 ## Role Variables
 
-See Example Playbook
+- `binaries`: this is the data structure that defines packages to install.
+  - `binaries.name`: The name of the binary to be placed in the path
+  - `binaries.url`: The download URL of the application
+  - `binaries.extract`: `True` only if the download is a archive
+  - `binaries.bin_name`: The name of the binary if not the same as `bin.name`
+  - `binaries.bin_path`: The path of the binary e.g. after extraction (only the folder not the binary itself)
+- `is_test`: Only required and set to `True` in molecule tests
 
 ## Dependencies
 
@@ -18,79 +28,7 @@ See Example Playbook
 
 ## Example Playbook
 
-```
----
-- name: Playbook
-  hosts: localhost
-  connection: local
-  pre_tasks:
-    - set_fact:
-        argocdcli_version: 1.5.6
-        awless_version: 0.1.11
-        awscli_version: 1.18.2
-        bat_version: 0.12.1
-        bit_version: 0.5.8
-        bottom_version: 0.6.3
-        delta_version: 0.3.0
-        direnv_version: 2.21.3
-        dive_version: 0.10.0
-        docker_compose_version: 1.25.4
-        docker_version: 19.03.8
-        doctl_version: 1.39.0
-        dog_version: v0.1.0
-        dua_version: 2.14.4
-        duf_version: 0.6.0
-        dust_version: 0.6.2
-        dyff_version: 1.4.3
-        entr_version: 4.6
-        exa_version : 0.9.0
-        fasd_version: 1.0.1
-        fd_version: v8.1.1
-        fluxctl_version: 1.19.0
-        githubcli_version: 0.6.2
-        gitui_version: 0.14.0
-        glab_version: 1.11.1
-        helm2_version: v2.16.9
-        helm_version: 3.1.1
-        istioctl_version: 1.5.1
-        jq_version: 1.6
-        k6_version: v0.29.0
-        k9s_version: 0.19.1
-        kind_version: 0.7.0
-        kops_version: 1.16.0
-        kube_linter_version: 0.2.2
-        kubectl_version: 1.18.0
-        kubectx_version: v0.9.1
-        kubectx_version: v0.9.1
-        kubens_version: v0.9.1
-        kubens_version: v0.9.1
-        kubeseal_version: 0.12.4
-        kubeval_version: 0.15.0
-        kustomize_version: 3.5.5
-        lazygit_version: 0.20.4
-        lf_version: r21
-        mdbook_version: 0.3.7
-        nnn_version: 3.3
-        pet_version: 0.3.6
-        polaris_version: 1.2.1
-        popeye_version: 0.7.1
-        ripgrep_version: 12.1.1
-        scc_version: 3.0.0
-        sd_version: 0.7.6
-        slack_term_version: 0.5.0
-        stern_version: 1.11.0
-        tectonic_version: 0.7.1
-        texlab_version: v3.2.0
-        tflint_version: v0.21.0
-        tfswitch_version: 0.8.832
-        tokei_version: 12.1.2
-        viddy_version: 0.1.6
-        xsv_version: 0.13.0
-        yq_version: 3.3.2
-        zoxide_version: 0.7.3
-  roles:
-    - ansible-role-binaries
-```
+See [converge.yml](https://github.com/Allaman/ansible-role-binaries/blob/master/molecule/default/converge.yml) which is used for testing
 
 ## License
 

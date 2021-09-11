@@ -20,6 +20,8 @@ provisioner:
 verifier:
   name: testinfra
   options:
+    # Debug
+    s: true
     # show which tests where executed in test output
     v: 1
 scenario:
