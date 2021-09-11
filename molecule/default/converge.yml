@@ -112,6 +112,7 @@
 
       - name: docker
         url: "https://download.docker.com/linux/static/stable/x86_64/docker-{{ docker_version }}.tgz"
+        bin_path: docker
         extract: true
 
       - name: doctl
