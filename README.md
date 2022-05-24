@@ -17,7 +17,7 @@ Run `molecule test` to test this role via docker
 - `binaries`: this is the data structure that defines packages to install.
   - `binaries.name`: The name of the binary to be placed in the path
   - `binaries.url`: The download URL of the application
-  - `binaries.extract`: `True` only if the download is a archive
+  - `binaries.extract`: `True` only if the download is an archive
   - `binaries.bin_name`: The name of the binary if not the same as `bin.name`
   - `binaries.bin_path`: The path of the binary e.g. after extraction (only the folder not the binary itself)
 - `is_test`: Only required and set to `True` in molecule tests
