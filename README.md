@@ -24,8 +24,6 @@ Run `molecule test` to test this role via docker
 
 ## Dependencies
 
-- ansible-role-basic
-
 ## Example Playbook
 
 See [converge.yml](https://github.com/Allaman/ansible-role-binaries/blob/master/molecule/default/converge.yml) which is used for testing
